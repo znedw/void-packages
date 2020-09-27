@@ -1,0 +1,18 @@
+# Template file for 'fienode'
+pkgname=fienode
+version=1.0
+revision=1
+build_style=go
+go_import_path=github.com/pwaller
+go_package="${go_import_path}/fienode"
+hostmakedepends="git"
+short_desc="Discover identical CoW copies"
+maintainer="Zach Nedwich <zach@znedw.com>"
+license="MIT"
+homepage="https://github.com/pwaller/fienode"
+distfiles="${homepage}/archive/v${version}.tar.gz"
+checksum=4cc0b80d21b4b2f15d3ed5506749752d28b342064549846f2efe9125f903e480
+
+post_install() {
+	vlicense LICENSE
+}
